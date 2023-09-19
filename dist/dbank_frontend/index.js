@@ -17032,7 +17032,7 @@ __webpack_require__.r(__webpack_exports__);
  * beginning in dfx 0.15.0
  */
 const canisterId =
-  "br5f7-7uaaa-aaaaa-qaaca-cai" ||
+  "bw4dl-smaaa-aaaaa-qaacq-cai" ||
   0;
 
 const createActor = (canisterId, options = {}) => {
@@ -17692,8 +17692,7 @@ __webpack_require__.r(__webpack_exports__);
 
 window.addEventListener("load", async function() {
   // console.log("Finished loading");
-  const currentAmount = await _declarations_dbank__WEBPACK_IMPORTED_MODULE_0__.dbank.checkBalance();
-  document.getElementById("value").innerText = currentAmount.toFixed(2); // Format to 2 decimal places;
+  update();
 });
 
 document.querySelector("form").addEventListener("submit", async function(event) {
@@ -17717,14 +17716,18 @@ document.querySelector("form").addEventListener("submit", async function(event) 
 
   _declarations_dbank__WEBPACK_IMPORTED_MODULE_0__.dbank.compound();
 
-  const currentAmount = await _declarations_dbank__WEBPACK_IMPORTED_MODULE_0__.dbank.checkBalance();
-  document.getElementById("value").innerText = currentAmount.toFixed(2); // Format to 2 decimal places;
+  update();
 
   document.getElementById("input-amount").value = "";
   document.getElementById("withdrawal-amount").value = "";
   button.removeAttribute("disabled");
 
 });
+
+async function update() {
+  const currentAmount = await _declarations_dbank__WEBPACK_IMPORTED_MODULE_0__.dbank.checkBalance();
+  document.getElementById("value").innerText = currentAmount.toFixed(2); // Format to 2 decimal places;
+}
 
 })();
 
