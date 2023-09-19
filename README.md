@@ -4,7 +4,18 @@ A blockchain web3 app created with DFINITY's Internet Computer.
 
 ## Overview
 
-DBank is a blockchain-based Web3 app built using Motoko and DFINITY's Internet Computer. This project aims to provide [brief description of what your app does or its purpose].
+DBank is a blockchain-based Web3 app built using Motoko and DFINITY's Internet Computer.
+
+# Features
+- Check your account balance.
+- Top up your account with funds.
+- Withdraw funds from your account.
+- Compound interest over time.
+
+## Technologies Used
+- DFINITY's Internet Computer
+- JavaScript
+- Motoko
 
 ## Getting Started
 
@@ -30,17 +41,6 @@ dfx deploy
 ```
 
 4. Access your DBank app at [http://localhost:4943?canisterId={asset_canister_id}](http://localhost:4943?canisterId={asset_canister_id}).
-
-# Features
-- Check your account balance.
-- Top up your account with funds.
-- Withdraw funds from your account.
-- Compound interest over time.
-
-## Technologies Used
-- DFINITY's Internet Computer
-- JavaScript
-- Motoko
 
 ## Development
 
